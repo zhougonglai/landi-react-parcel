@@ -2,12 +2,6 @@ import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'mobx-react';
 
-import {
-  Button,
-  Msg
-} from 'react-weui';
-
-import Page from './components/Page';
 import Store from './store';
 import App from './containers/App';
 
