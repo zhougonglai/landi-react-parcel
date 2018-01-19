@@ -1,31 +1,21 @@
-import {observable, action} from 'mobx';
+import {createStore, applyMiddleware, compose} from 'redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
-export class Todo {
-  id = Math.random();
-  @observable title = '';
-  @observable finished = false;
+import reducer from '../reducers';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+let middlewares;
+
+if(process.env.NODE_ENV !== 'production'){
+  middlewares = applyMiddleware(thunk, logger);
+}else{
+  middlewares = applyMiddleware(thunk);
 }
 
-export default class Store {
-  static instance;
-  @observable list = [];
-  @observable user = {};
+const store = createStore(
+  reducer, composeEnhancers(middlewares)
+);
 
-  static getInstance = () => Store.instance || (Store.instance = new Store());
-
-  @action setUser (user) {
-    this.user = user;
-  }
-
-  @action addItem (item) {
-    this.list.concat([item]);
-  }
-
-  @action onUserChange(account) {
-    this.user.account = account;
-  }
-
-  fetchUser (phone, password) {
-    return {phone, password};
-  }
-}
+export default store;
