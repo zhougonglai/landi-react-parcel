@@ -37,7 +37,6 @@ class App extends React.Component {
                 label: 'Cancel',
                 onClick: this.logout
             }]}/>
-            <hr />
         </Page>
     )
   }
