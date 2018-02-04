@@ -2,9 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no">
   <title>result-page</title>
+  <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+    window.onload = function () {
+      window.viewportUnitsBuggyfill.init({
+        hacks: window.viewportUnitsBuggyfillHacks
+      });
+
+      var winDPI = window.devicePixelRatio;
+      var uAgent = window.navigator.userAgent;
+      var screenHeight = window.screen.height;
+      var screenWidth = window.screen.width;
+      var winWidth = window.innerWidth;
+      var winHeight = window.innerHeight;
+    }
+  </script>
 </head>
 <body>
   <div id="app"></div>
