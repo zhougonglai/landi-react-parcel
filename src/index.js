@@ -6,8 +6,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Store from './store';
 import App from './containers/App';
 
-import 'weui';
-import 'react-weui/build/packages/react-weui.css';
+// import 'antd/dist/antd-mobile.css';
 import './styles/app.styl';
 
 class Root extends React.Component {

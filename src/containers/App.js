@@ -1,6 +1,6 @@
 import React from 'react';
-import {Msg} from 'react-weui';
 import {connect} from 'react-redux';
+import {Button} from 'antd-mobile';
 
 import Page from '../components/Page';
 
@@ -18,20 +18,9 @@ class App extends React.Component {
 
     return (
       <Page id="content">
-          <Msg 
-            type="success"
-            title="Action Success"
-            description={`count: ${counter.count}`}
-            buttons={[{
-                type: 'primary',
-                label: 'Ok',
-                onClick: this.increment
-            }, {
-                type: 'default',
-                label: 'Cancel',
-                onClick: this.decrement
-            }]}/>
-        </Page>
+        bjhbj
+        <Button type="primary">asfasf</Button>
+      </Page>
     )
   }
 }

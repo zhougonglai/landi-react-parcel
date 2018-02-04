@@ -1,14 +1,34 @@
 @import './Variable.styl';
 
+body
+  font-family: "Monospace Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5
+  color: #314659
+  font-size: 14px
 #content
   width: 100vw
   height: 100vh
   overflow: hidden
-  .spe
-    width: 60px
-    height: 60px
-  &.page
-    display: flex
-    align-items: center
-    justify-content: center
-    
+  .ant-layout-header
+    padding: 0
+    background-color: transparent
+    transition: all 0.3s
+    box-shadow: 0 2px 8px #f0f1f2
+    position: relative
+    z-index: 10;
+    max-width: 100%
+    #logo
+      height: 64px
+      display: block
+      line-height: 64px
+    @media only screen and (max-width: 1200px)
+      #logo
+        padding: 0 40px
+
+/* divice orientation */
+@media screen and (orientation: portrait) {
+  /*竖屏 css*/
+} 
+@media screen and (orientation: landscape) {
+  /*横屏 css*/
+}
