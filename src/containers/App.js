@@ -17,7 +17,7 @@ class App extends React.Component {
     const { counter } = this.props;
 
     return (
-      <Page id="content">
+      <Page>
         bjhbj
         <Button type="primary">asfasf</Button>
       </Page>

@@ -13,13 +13,6 @@
     "transform-decorators-legacy",
     "transform-async-to-generator",
     "syntax-dynamic-import",
-    ["import", { "libraryName": "antd-mobile", "style": "css" }],
-    ["module-resolver",
-    {
-      "root": ["./src"],
-      "alias": {
-        "src": "./src"
-      }
-    }]
+    ["import", { "libraryName": "antd-mobile", "style": "css" }]
   ]
 }

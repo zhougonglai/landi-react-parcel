@@ -14,9 +14,7 @@ class Root extends React.Component {
     return (
       <BrowserRouter>
         <Provider  store={Store}>
-          <Switch>
-            <Route component={App}/>
-          </Switch>
+          <Route component={App}/>
         </Provider>
       </BrowserRouter>
     )
@@ -27,6 +25,7 @@ render(<Root />, document.getElementById('app'));
 
 if(module.hot) {
   module.hot.accept(()=>{
+    console.log('page replace!!!');
     render(<Root />, document.getElementById('app'));
   });
 }

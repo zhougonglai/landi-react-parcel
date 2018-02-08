@@ -5,25 +5,16 @@ body
   line-height: 1.5
   color: #314659
   font-size: 14px
-#content
+#app
   width: 100vw
   height: 100vh
   overflow: hidden
-  .ant-layout-header
-    padding: 0
-    background-color: transparent
-    transition: all 0.3s
-    box-shadow: 0 2px 8px #f0f1f2
-    position: relative
-    z-index: 10;
-    max-width: 100%
-    #logo
-      height: 64px
-      display: block
-      line-height: 64px
-    @media only screen and (max-width: 1200px)
-      #logo
-        padding: 0 40px
+  display: flex
+  flex-direction: column
+  align-content: stretch
+  align-items: stretch
+  .default-page-style
+    flex: 1
 
 /* divice orientation */
 @media screen and (orientation: portrait) {
